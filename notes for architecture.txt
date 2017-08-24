@@ -1,0 +1,38 @@
+Chapter 2: Digital Logic Design
+
+Logic circuit
+	-AND
+	-OR
+	-NAND
+	-XOR
+	-NOT
+	-Logic circuit design steps:
+		*feasibility study
+		*circuit design
+		*circuit simulation
+		*optimization
+	-Circuit is then manufactured either on
+		* printed circuit board (PCB)
+Gates and flip-flops
+	-combinational circuit
+	
+FPGA
+	-field-programmable gate array
+	-functions like a microprocessor
+	-used to implement any logic circuit
+	-replace most of the logic circuits designed with standard IC
+TPM
+	-trusted platform module is a microcontroller that can securely store artifacts used to authenticate the platform
+	-artifacts can include passwords, certificates, or encryptioon keys
+	-authentication
+PUF - Physical unclonable function
+	-store digital information on a device that is resistant to physical attack
+	-tamper-proof
+	-based on a physical system
+	-easy to evaluate
+	-output looks like a random function
+	-unpredictable even an attacker with physical access
+
+TTL
+CMOS
+Type of IC for 1 bit mem

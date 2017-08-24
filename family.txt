@@ -1,0 +1,40 @@
+.headers on
+-- Name: family.sql
+-- Author: Gavin
+-- Date: 8/24/17
+
+drop table if exists family;
+
+create table family(
+	id int primary key,
+	name text,
+	role text,
+	sex int
+	);
+
+insert into family values (1, "Gavin", "child", 1);
+
+insert into family values (2, "Sean", "child", 1);
+
+insert into family values (3, "Mary", "parent", 0);
+
+insert into family values (4, "Casey", "child", 1);
+
+select * from family;
+id|name|role|sex
+1|Gavin|child|1
+2|Sean|child|1
+3|Mary|parent|0
+4|Casey|child|1
+
+select * from family where role like "child";
+id|name|role|sex
+1|Gavin|child|1
+2|Sean|child|1
+4|Casey|child|1
+
+select * from family where sex = 1;
+id|name|role|sex
+1|Gavin|child|1
+2|Sean|child|1
+4|Casey|child|1

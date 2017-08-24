@@ -1,0 +1,11 @@
+CPSC-4175 individual repo "<your name>, <repo URL>"
+
+\analytics
+\design
+\implementation
+\tests
+\userdocs
+
+Exercise- to create UML diagram and deliver as PDF
+
+look a graphviz

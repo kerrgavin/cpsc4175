@@ -1,0 +1,5 @@
+SQLITE NOTES
+.exit - exit command
+.help - help command for the system commands
+.once - takes file names as argument, puts next output into file
+

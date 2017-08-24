@@ -1,0 +1,12 @@
+1. +git config --global
+2. +git config --local
+3.  git init
+4. +git add
+5.  git status
+6. +git commit -am
+7.  git log
+8. +git push 
+9. > outfile.txt (output redirect)
+10.< infile.py (input redirect)
+
+Ten questions that will be on Quiz 2. "+" means that there are other arguments.
