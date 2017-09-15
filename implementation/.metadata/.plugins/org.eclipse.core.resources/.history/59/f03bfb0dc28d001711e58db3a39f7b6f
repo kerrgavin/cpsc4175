@@ -1,8 +1,0 @@
-
-public class ATMRunner {
-	public static void main(String args[]) {
-		AutomatedTellerMachine atm = new AutomatedTellerMachine();
-		atm.retrieveAccount("0000");
-		System.out.println(atm);
-	}
-}
