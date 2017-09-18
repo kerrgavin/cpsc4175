@@ -43,4 +43,4 @@
 7. The diagram is located in the homework folder
 8. The diagram is located in the homework folder
 9. The diagram is located in the homework folder
-10 The diagram is located in the homework folder
+10. The diagram is located in the homework folder
