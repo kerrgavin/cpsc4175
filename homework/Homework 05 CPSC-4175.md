@@ -4,7 +4,7 @@
 1. Operation-oriented design is the design technique in which the emphasis is on the operations. Data-oriented design is when the data is consider first. They differ in the fact they put the emphasis on one part of the whole picture, while leaving the other to some secondary position. This is to the determent of the secondary.
 2. The inputs to the design workflow are the specification documents. The point of the design workflow is to iterate and increment until the input are in a fomat that can be used by the programmers. As such, the inputs directly affect the output, which is what the programmers work off of. The outputs are the design documents. These are the documents that will be used by the programmers and will directly affect how they build the software.
 
-3.For the input variables I would perhaps take the majors and minor a paticular student. The output variables would be the classes that the student would have to take to graduate. The processing variable would hold the intermidiate values from transforming the majors and minors to the classes.
+3. For the input variables I would perhaps take the majors and minor a paticular student. The output variables would be the classes that the student would have to take to graduate. The processing variable would hold the intermidiate values from transforming the majors and minors to the classes.
 
 4. The subprocedures would be as follows: identify majors/minors, retrieve class list, return class list.
 
