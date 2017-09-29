@@ -3,15 +3,17 @@ public class Account {
 	private String accountNumber;
 	private String accountName;
 	private double balance;
+	private DebitCard card;
 	
 	public Account() {
-		this(null, null, 0.0);
+		this(null, null, 0.0, null);
 	}
 	
-	public Account(String accountNumber, String accountName, double balance) {
+	public Account(String accountNumber, String accountName, double balance, DebitCard card) {
 		setAccountNumber(accountNumber);
 		setAccountName(accountName);
 		setBalance(balance);
+		setCard(card);
 	}
 	
 	public void setAccountNumber(String accountNumber) {
@@ -48,6 +50,14 @@ public class Account {
 	
 	public double getBalance() {
 		return this.balance;
+	}
+	
+	public void setCard(DebitCard card) {
+		this.card = card;
+	}
+	
+	public DebitCard getCard() {
+		return this.card;
 	}
 	
 	public String toString() {

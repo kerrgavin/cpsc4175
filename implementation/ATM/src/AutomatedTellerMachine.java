@@ -20,9 +20,9 @@ public class AutomatedTellerMachine {
 		return this.acc;
 	}
 	
-	public void retrieveAccount(String pin) {
+	public void retrieveAccount(String pin, DebitCard card) {
 		
-		acc = dbr.getAccount(pin);
+		acc = dbr.getAccount(pin, card);
 		if(acc == null) {
 			System.out.println("Non-existant PIN");
 		}

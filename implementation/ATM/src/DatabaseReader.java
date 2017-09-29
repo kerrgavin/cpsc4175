@@ -7,7 +7,7 @@ public class DatabaseReader {
         Connection conn = null;
         try {
             // db parameters
-            String url = "jdbc:sqlite:C:\\Users\\Gavin\\Documents\\cpsc4175\\accounts.db";
+            String url = "jdbc:sqlite:C:\\Users\\Gavin\\Documents\\cpsc4175\\implementation\\ATM\\accounts.db";
             // create a connection to the database
             conn = DriverManager.getConnection(url);
             
@@ -19,15 +19,15 @@ public class DatabaseReader {
         return conn;
     }
 	
-	public Account getAccount(String pin) {
-		String query = "SELECT * FROM accounts WHERE Pin=\""+pin+"\"";
+	public Account getAccount(String pin, DebitCard card) {
+		String query = "SELECT * FROM accounts WHERE Pin=\""+pin+"\" AND CARD=\""+ card.getValue() +"\"";
 		Account acc = null;
 		
 		try(Connection conn = this.connect();
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(query)){
 			
-			acc = new Account(rs.getString("AccountNumber"), rs.getString("AccountName"), rs.getDouble("Balance"));
+			acc = new Account(rs.getString("AccountNumber"), rs.getString("AccountName"), rs.getDouble("Balance"), card);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}

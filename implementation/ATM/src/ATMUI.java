@@ -1,8 +1,10 @@
+import java.io.*;
 import java.util.*;
 public class ATMUI {
 	AutomatedTellerMachine atm;
 	String userPin;
 	int userChoice;
+	String cardVal;
 	double userAmount;
 	Scanner input= new Scanner(System.in);
 	Scanner inputI = new Scanner(System.in);
@@ -29,8 +31,10 @@ public class ATMUI {
 	
 	public void process(){
 		while (true) {
-			userPin = loginMenu();
-			atm.retrieveAccount(userPin);
+			cardVal = acceptCard();
+			System.out.println(cardVal);
+			userPin = acceptPin();
+			atm.retrieveAccount(userPin, new DebitCard(cardVal));
 			while(atm.getAccount() != null) {
 				try{
 					userPin = null;
@@ -64,7 +68,19 @@ public class ATMUI {
 		
 	}
 	
-	public String loginMenu() {
+public String acceptCard() {
+		
+		System.out.print("Welcome to ATM. \nPlease insert your debit card. \nCard> ");
+		try {
+			BufferedReader in = new BufferedReader(new FileReader(input.nextLine()+".txt"));
+			return in.readLine();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
+	}
+	
+	public String acceptPin() {
 		
 		System.out.print("Welcome to ATM. \nPlease enter your PIN number. \nPin> ");
 		return input.nextLine();

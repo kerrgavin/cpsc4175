@@ -1,0 +1,44 @@
+import java.util.*;
+
+
+public class DebitCardGenerator {
+	
+	private int bitCount;
+	
+	public static void main(String args[]){
+		DebitCardGenerator dbg = new DebitCardGenerator();
+		dbg.setBitCount(8);
+		System.out.println(dbg.genBitString(dbg.getBitCount()));
+	}
+	
+	public DebitCardGenerator() {
+		this(0);
+	}
+	
+	public DebitCardGenerator(int bitCount) {
+		setBitCount(bitCount);
+	}
+	
+	public void setBitCount(int bitCount) {
+		if(bitCount > 0) {
+			this.bitCount = bitCount;
+		} else {
+			System.out.println("Bit count not large enough");
+		}
+	}
+	
+	public int getBitCount() {
+		return this.bitCount;
+	}
+	
+	public String genBitString(int bitCount) {
+		String bitString = "";
+		int bit = 0;
+		for(int i = 0; i < bitCount; i++) {
+			bit = (int) (Math.random() * 2);
+			System.out.println(bit);
+			bitString += bit;
+		}
+		return bitString;
+	}
+}
