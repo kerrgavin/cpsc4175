@@ -1,0 +1,36 @@
+Welcome to ATM. 
+Please insert your debit card. 
+Card> F74D4358524296C1F415CDF5
+Welcome to ATM. 
+Please enter your PIN number. 
+Pin> Welcome Kerr, Gavin - please select your operation:
+	[1] Account Status 
+	[2] Withdraw 
+	[3] Deposit
+	[4] Exit
+Selection>
+Account Number: 000000012
+Account Name: Kerr, Gavin
+Balance: 1000.0
+
+Hit enter to continue>Welcome Kerr, Gavin - please select your operation:
+	[1] Account Status 
+	[2] Withdraw 
+	[3] Deposit
+	[4] Exit
+Selection>Enter the amount you would like to deposit:
+Amount> $$100.00 deposited.
+Welcome Kerr, Gavin - please select your operation:
+	[1] Account Status 
+	[2] Withdraw 
+	[3] Deposit
+	[4] Exit
+Selection>Enter the amount you would like to withdraw:
+Amount> $100.0
+$100.00 withdrawn.
+Welcome Kerr, Gavin - please select your operation:
+	[1] Account Status 
+	[2] Withdraw 
+	[3] Deposit
+	[4] Exit
+Selection>No line found

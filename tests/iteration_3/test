@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+t1=""
+
+cat case0.txt | ./compile_n_run > caseOutput0.txt
+t2="$(diff caseCheck0.txt caseOutput0.txt)"
+echo hello $test
+if [ "$t2"="$t1" ]
+then
+	echo Test Pass
+else
+	echo Test Fail
+fi

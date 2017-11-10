@@ -1,0 +1,9 @@
+JohnSmith
+0000
+Welcome to ATM. 
+Please insert your debit card. 
+Card> JohnSmith.txt (The system cannot find the file specified)
+null
+Welcome to ATM. 
+Please enter your PIN number. 
+Pin> No suitable driver found for jdbc:sqlite:C:\Users\Gavin\Documents\cpsc4175\implementation\ATM\accounts.db

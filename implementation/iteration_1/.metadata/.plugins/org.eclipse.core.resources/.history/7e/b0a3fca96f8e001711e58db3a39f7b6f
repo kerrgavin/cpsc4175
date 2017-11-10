@@ -1,0 +1,99 @@
+import java.util.*;
+public class ATMUI {
+	AutomatedTellerMachine atm;
+	String userPin;
+	int userChoice;
+	double userAmount;
+	Scanner input = new Scanner(System.in);
+	public ATMUI() {
+		this(null);
+	}
+	
+	public ATMUI(AutomatedTellerMachine atm) {
+		setATM(atm);
+		userPin = "";
+		userChoice = 0;
+		userAmount = 0.0;
+		this.boot();
+	}
+	
+	public void setATM(AutomatedTellerMachine atm) {
+		this.atm = atm;
+	}
+	
+	public AutomatedTellerMachine getATM() {
+		return this.atm;
+	}
+	
+	public void boot(){
+		while (true) {
+			userPin = loginMenu();
+			do {
+			try{
+				atm.retrieveAccount(userPin);
+				
+				userChoice = mainMenu();
+				switch(userChoice) {
+				case 1:
+					accountStatus();
+					break;
+				case 2:
+					withdraw();
+					break;
+				case 3:
+					deposit();
+					break;
+				case 4:
+					exit();
+					break;
+				}
+				
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			} while(atm.getAccount() != null);
+		}
+		
+	}
+	
+	public String loginMenu() {
+		System.out.print("Welcome to ATM. \n Please enter your PIN number. \nPin> ");
+		return input.next();
+	}
+	
+	public int mainMenu() {
+		System.out.print("Welcome "+ atm.getAccount().getAccountName() +" - please select your operation:"
+				+ "\n\t[1] Account Status \n\t[2] Withdraw \n\t[3] Deposit\nSelection>");
+		return input.nextInt();
+	}
+	
+	public void accountStatus() {
+		System.out.println(atm);
+	}
+	
+	public void withdraw() {
+		System.out.print("Enter the amount you would like to withdraw:\nAmount> $");
+		try {
+			userAmount = input.nextDouble();
+			atm.withdraw(userAmount);
+			System.out.print(userAmount+" withdrawn.\n");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void deposit() {
+		System.out.print("Enter the amount you would like to deposit:\nAmount> $");
+		try {
+			userAmount = input.nextDouble();
+			atm.deposit(userAmount);
+			System.out.print(userAmount+" deposited.\n");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void exit() {
+		atm.setAccount(null);
+	}
+}

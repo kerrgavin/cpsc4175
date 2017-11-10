@@ -1,0 +1,28 @@
+
+public class AutomatedTellerMachine {
+	
+	Account acc;
+	public AutomatedTellerMachine() {
+		
+	}
+	
+	public AutomatedTellerMachine(Account acc){
+		setAccount(acc);
+	}
+	
+	public void setAccount(Account acc) {
+		this.acc = acc;
+	}
+	
+	public Account getAccount(){
+		return this.acc;
+	}
+	
+	public void retrieveAccount(String pin) {
+		acc = DatabaseReader.getAccount(pin);
+	}
+	
+	public String toString() {
+		return acc.toString();
+	}
+}
