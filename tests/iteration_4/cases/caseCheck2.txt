@@ -1,0 +1,19 @@
+Welcome to ATM. 
+Please insert your debit card. 
+Card> F74D4358524296C1F415CDF5
+Welcome to ATM. 
+Please enter your PIN number. 
+Pin> Welcome Kerr, Gavin - please select your operation:
+	[1] Account Status 
+	[2] Withdraw 
+	[3] Deposit
+	[4] Exit
+Selection>Enter the amount you would like to withdraw:
+Amount> $1.0E7
+Inncorrect Account balance size
+Welcome Kerr, Gavin - please select your operation:
+	[1] Account Status 
+	[2] Withdraw 
+	[3] Deposit
+	[4] Exit
+Selection>No line found

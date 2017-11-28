@@ -1,0 +1,4 @@
+#!/bin/bash
+
+javac -cp .:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/lib/sqlite-jdbc-3.20.0.jar:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/src/ src/*.java
+java -cp .:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/lib/sqlite-jdbc-3.20.0.jar:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/src/ ATMRunner

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo Beginning Testing...
+t1=""
+javac -cp .:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/lib/sqlite-jdbc-3.20.0.jar:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/src/:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/src/Testing/ src/Testing/Test.java
+java -cp .:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/lib/sqlite-jdbc-3.20.0.jar:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/src/:/mnt/c/Users/Gavin/Documents/cpsc4175/implementation/iteration_4/src/Testing/ Test
+
+cat cases/case0.txt | ./compile_n_run > cases/caseOutput0.txt
+t2="$(diff cases/caseCheck0.txt cases/caseOutput0.txt)"
+if [ "$t2"="$t1" ]
+then
+	echo Test 1 Pass
+else
+	echo Test 1 Fail
+fi
+rm cases/caseOutput0.txt
+
+cat cases/case1.txt | ./compile_n_run > cases/caseOutput1.txt
+t2="$(diff cases/caseCheck1.txt cases/caseOutput1.txt)"
+if [ "$t2"="$t1" ]
+then
+        echo Test 2 Pass
+else
+        echo Test 2 Fail
+fi
+rm cases/caseOutput1.txt
+
+cat cases/case2.txt | ./compile_n_run > cases/caseOutput2.txt
+t2="$(diff cases/caseCheck2.txt cases/caseOutput2.txt)"
+if [ "$t2"="$t1" ]
+then
+        echo Test 3 Pass
+else
+        echo Test 3 Fail
+fi
+rm cases/caseOutput2.txt
